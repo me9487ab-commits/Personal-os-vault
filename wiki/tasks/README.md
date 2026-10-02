@@ -24,8 +24,10 @@ GTD 簡化版任務管理。Layer 2 的工作區之一。
 |---|---|---|
 | `date` | ✓ | 建立日期 (YYYY-MM-DD) |
 | `type` | ✓ | `task` |
-| `status` | ✓ | `inbox` / `next` / `waiting` / `someday` / `done` |
 | `tags` | | 標籤陣列 |
+
+> **Method B**: task 狀態由檔案位置決定，不在 frontmatter 用 `status` 欄位。
+> `inbox/` / `next/` / `waiting/` / `someday/` / `done/` 就是狀態。
 | `context` | | 情境（@home / @work / @errand） |
 | `energy` | | `low` / `medium` / `high` |
 | `time-estimate` | | `15min` / `30min` / `1h` ... |
@@ -53,7 +55,6 @@ GTD 簡化版任務管理。Layer 2 的工作區之一。
 ---
 date: 2026-10-02
 type: task
-status: next
 tags: [admin]
 context: [home]
 energy: low
@@ -67,6 +68,9 @@ priority: medium
 
 # 換護照
 ```
+
+> 檔案位置: `wiki/tasks/next/2026-10-02-renew-passport.md`
+> → 狀態 `next` 由 folder 編碼（Method B）
 
 ## 流程
 

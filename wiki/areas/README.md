@@ -32,6 +32,8 @@ type: readme
 | `status` | ✓ | `active` / `dormant` |
 | `tags` | | 標籤 |
 
+> Area 是 `status: this_type` 不用 Method B（area 是單一檔案不移動 folder）
+
 ## 內容結構
 
 每個 area 檔案內含：

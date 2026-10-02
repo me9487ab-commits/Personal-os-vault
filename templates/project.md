@@ -15,8 +15,8 @@ tags: []
 ## Tasks
 ```dataview
 TASK
-FROM "wiki/tasks"
-WHERE project = "<% tp.file.title %>" AND status != "done"
+FROM "wiki/tasks/next"
+WHERE project = "<% tp.file.title %>"
 ```
 
 ## 決策

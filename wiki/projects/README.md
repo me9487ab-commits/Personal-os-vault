@@ -29,6 +29,8 @@ projects/<project-slug>/
 | `type` | ✓ | `project` |
 | `status` | ✓ | `active` / `paused` / `completed` / `cancelled` |
 | `area` | | 對應 [[wiki/areas/README\|area]] |
+
+> Project `status` 不用 Method B（project 不每天移 folder，只在完成 / 取消時移 archives）
 | `due` | | deadline (YYYY-MM-DD) |
 | `tags` | | 標籤 |
 

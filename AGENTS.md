@@ -162,15 +162,15 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 
 各檔案類型對應模板：
 
-| 類型 | 必填欄位 | 模板 |
-|---|---|---|
-| task | `date`, `type` | [[templates/task]] |
-| project | `type`, `status`, `area` | [[templates/project]] |
-| area | `type`, `status` | [[templates/area]] |
-| daily | `date`, `type` | [[templates/daily]] |
-| capture | `date`, `type`, `source:` | [[templates/capture]] |
-| event | `date`, `type`, `title`, `start`, `end` | [[templates/event]] |
-| recurring-event | `type`, `title`, `start-time`, `duration`, `days`, `start-date` | [[templates/recurring-event]] |
+| 類型 | 必填欄位 | 模板 | `status` 欄位 |
+|---|---|---|---|
+| task | `date`, `type` | [[templates/task]] | ❌ **NO**（Method B：folder = 狀態）|
+| project | `type`, `area` | [[templates/project]] | ✅ `active` / `paused` / `completed` / `cancelled` |
+| area | `type` | [[templates/area]] | ✅ `active` / `dormant` |
+| daily | `date`, `type` | [[templates/daily]] | ❌ N/A |
+| capture | `date`, `type`, `source:` | [[templates/capture]] | ❌ N/A |
+| event | `date`, `type`, `title`, `start`, `end` | [[templates/event]] | ✅ `confirmed` / `tentative` / `cancelled` |
+| recurring-event | `type`, `title`, `start-time`, `duration`, `days`, `start-date` | [[templates/recurring-event]] | ❌ N/A |
 
 詳細 schema 見各 [[templates/|Templates 資料夾]] 與各資料夾 README。
 
@@ -181,6 +181,20 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 - **MUST** 同資料夾：`[[page-name]]`
 - **MUST NOT** task 連 project / area 用 wikilink — 用 frontmatter 欄位（方便 Dataview query）
 - **SHOULD** 用 Graph View 看整體關係
+
+## `status:` 欄位使用規則
+
+Method B 只對 **task** 強制（folder = 狀態）。其他類型的 `status` 是 lifecycle state：
+
+| 類型 | 用 `status` | 不 用 | 狀態怎麼表示 |
+|---|---|---|---|
+| task | | ✓ | folder: `inbox/` / `next/` / `waiting/` / `someday/` / `done/` |
+| project | ✓ | | `status: active/paused/completed/cancelled` |
+| area | ✓ | | `status: active/dormant` |
+| event | ✓ | | `status: confirmed/tentative/cancelled` |
+| daily / capture / recurring-event | | ✓ | N/A |
+
+**Reasoning**: task 是 vault 裡最會流動的類型，所以用 folder 編碼狀態最高效。project / area / event 檔案不常移動位置，所以用 `status` 欄位管理 lifecycle 比較直觀。
 
 ## Areas vs Projects 判斷
 
@@ -205,5 +219,5 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 - ❌ **MUST NOT** 混用大小寫命名
 - ❌ **MUST NOT** 把書摘、學習筆記、topic wiki 放這 — 歸 LLM-Wiki vault
 - ❌ **MUST NOT** 在 `projects/` 放無 deadline 的東西（那是 area）
-- ❌ **MUST NOT** 用 `status:` 欄位（Method B：location = status）
+- ❌ **MUST NOT** task 用 `status:` 欄位（Method B：folder = 狀態）
 - ❌ **MUST NOT** 把 `raw/<sub>/` 的待處理檔留超過 1 天（triage 必須當天或隔天做）
