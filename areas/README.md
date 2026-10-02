@@ -68,7 +68,7 @@ tags: [personal, long-term]
 - 預約年度健檢
 
 ## 知識庫
-- [[wiki/health-sleep|LLM-Wiki: 睡眠]]（外部連結，wikilink 形式）
+- <LLM-Wiki topic 連結（外部 markdown 連結）>
 ```
 
 > 知識庫段落**只放 wikilink 指向 LLM-Wiki vault**，不放知識內容本身。知識管理歸 LLM-Wiki。

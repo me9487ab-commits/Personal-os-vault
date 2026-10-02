@@ -9,7 +9,7 @@ type: meta
 
 個人作業系統 vault。涵蓋**任務管理（GTD 簡化）、行事曆、Project 追蹤、Areas 持續責任、Email 整合、每日 reflection**。
 
-> 知識管理不在本 vault 範圍，統一歸 LLM-Wiki vault。
+> 書摘、學習筆記、topic wiki 不在本 vault 範圍，統一歸 LLM-Wiki vault。
 
 設計借鑒 LLM-Wiki 的「不可變 inbox + wikilink 串連」模式，加上 GTD 與 PARA 兩個生產力方法論。
 
@@ -143,5 +143,5 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 - ❌ 不要直接編輯 `raw/` 內的檔案
 - ❌ 不要略過 frontmatter
 - ❌ 不要混用大小寫命名
-- ❌ 不要把知識管理類內容（書摘、學習筆記、topic wiki）放這——歸 LLM-Wiki vault
+- ❌ 不要把書摘、學習筆記、topic wiki 放這——歸 LLM-Wiki vault
 - ❌ 不要在 `projects/` 放無 deadline 的東西（那是 area）

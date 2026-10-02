@@ -7,7 +7,7 @@ type: index
 
 個人作業系統 vault。涵蓋**任務管理、行事曆、Project 追蹤、Areas 持續責任、Email 整合、每日 reflection**。
 
-> 知識管理歸 LLM-Wiki vault，不在本 vault 範圍。
+> 書摘、學習筆記、topic wiki 歸 LLM-Wiki vault，不在本 vault 範圍。
 
 ## 三層架構
 
