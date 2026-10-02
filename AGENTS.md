@@ -23,7 +23,7 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 
 ### Layer 1 — raw/（不可變 inbox）
 - 一旦寫入就不修改
-- 三個子資料夾：`captures/`、`emails/drafts/`、`external/`
+- 三個子資料夾：`captures/`、`emails/`、`external/`
 - 任何東西先 capture 再 triage，絕不繞過
 
 ### Layer 2 — wiki/（互相串連的資料網絡）
@@ -133,8 +133,8 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 
 ## Email 整合
 
-- 進：`raw/emails/inbox/`（未來）
-- AI 寫的 reply draft：`raw/emails/drafts/`
+- 進：`raw/emails/`（所有 inbound + outbound 都放這）
+
 - 標籤 / 優先序：透過 frontmatter `priority:`、`tags:` 欄位
 - 送出後：把對應 task 標 `status: sent`，歸 `tasks/done/YYYY-MM/`
 
