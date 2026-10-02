@@ -1,0 +1,144 @@
+{
+  "macros": {
+    "capture": {
+      "type": "macro",
+      "name": "New Capture",
+      "macro": {
+        "actions": [
+          {
+            "type": "createNote",
+            "name": "Create capture",
+            "path": "raw/captures",
+            "template": "templates/capture.md",
+            "openInNewPane": true,
+            "fileName": {
+              "type": "date",
+              "format": "YYYY-MM-DD",
+              "prefix": "",
+              "append": "-"
+            },
+            "content": {
+              "type": "user",
+              "command": "QuickAdd: Choose properties"
+            }
+          }
+        ]
+      }
+    },
+    "task": {
+      "type": "macro",
+      "name": "New Task",
+      "macro": {
+        "actions": [
+          {
+            "type": "createNote",
+            "name": "Create task",
+            "path": "wiki/tasks/inbox",
+            "template": "templates/task.md",
+            "openInNewPane": true,
+            "fileName": {
+              "type": "user",
+              "command": "QuickAdd: Choose properties"
+            },
+            "content": {
+              "type": "user",
+              "command": "QuickAdd: Choose properties"
+            }
+          }
+        ]
+      }
+    },
+    "event": {
+      "type": "macro",
+      "name": "New Event",
+      "macro": {
+        "actions": [
+          {
+            "type": "createNote",
+            "name": "Create event",
+            "path": "wiki/calendar/synced",
+            "template": "templates/event.md",
+            "openInNewPane": true,
+            "fileName": {
+              "type": "date",
+              "format": "YYYY-MM-DD-HH-MM"
+            },
+            "content": {
+              "type": "user",
+              "command": "QuickAdd: Choose properties"
+            }
+          }
+        ]
+      }
+    },
+    "project": {
+      "type": "macro",
+      "name": "New Project",
+      "macro": {
+        "actions": [
+          {
+            "type": "createNote",
+            "name": "Create project",
+            "path": "wiki/projects",
+            "template": "templates/project.md",
+            "openInNewPane": true,
+            "fileName": {
+              "type": "user",
+              "command": "QuickAdd: Choose properties"
+            },
+            "content": {
+              "type": "user",
+              "command": "QuickAdd: Choose properties"
+            }
+          }
+        ]
+      }
+    },
+    "daily": {
+      "type": "macro",
+      "name": "New Daily",
+      "macro": {
+        "actions": [
+          {
+            "type": "createNote",
+            "name": "Create daily",
+            "path": "wiki/daily",
+            "template": "templates/daily.md",
+            "openInNewPane": true,
+            "fileName": {
+              "type": "date",
+              "format": "YYYY-MM-DD"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "choices": [
+    {
+      "name": "\ud83d\udce5 Capture",
+      "type": "macro",
+      "macroName": "capture"
+    },
+    {
+      "name": "\u2705 Task",
+      "type": "macro",
+      "macroName": "task"
+    },
+    {
+      "name": "\ud83d\udcc5 Event",
+      "type": "macro",
+      "macroName": "event"
+    },
+    {
+      "name": "\ud83c\udfaf Project",
+      "type": "macro",
+      "macroName": "project"
+    },
+    {
+      "name": "\ud83d\udcdd Daily",
+      "type": "macro",
+      "macroName": "daily"
+    }
+  ]
+}

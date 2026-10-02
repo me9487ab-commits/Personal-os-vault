@@ -31,3 +31,31 @@ Layer 2 重新組織：tasks/calendar/projects/areas/daily/archives → wiki/ �
 - raw/ 維持頂層（Layer 1 不可變 inbox）
 - wiki/tasks/, wiki/calendar/, wiki/projects/, wiki/areas/, wiki/daily/, wiki/archives/
 - AGENTS.md、index.md、全部 README.md 的 wikilink 同步更新
+
+
+## [2026-10-02] plugins | 安裝 5 個 Obsidian community plugins + 設定 + 修漏洞
+
+### 安裝
+- templater 2.25.1
+- dataview 0.5.70
+- obsidian-tasks 8.4.0
+- quickadd 2.29.0
+- calendar (liamcain) 2.0.0-beta.2
+
+### 啟用 Obsidian core plugins
+- Calendar、Daily Notes、Templates 跟其他常用 core plugins
+
+### 設定
+- templatesFolder = templates/
+- dailyNotesFolder = wiki/daily
+- dailyNoteTemplate = templates/daily.md
+- QuickAdd 5 macro: Capture / Task / Event / Project / Daily
+
+### 修的漏洞
+- Dataview query 路徑全改 wiki/ 前綴
+- 建立 wiki/tasks/done/
+- INBOX query 加 triaged:null 過濾
+- templates/daily.md query 語意修
+- templates/task.md 移除 status 預設（方法 B：位置決定狀態），加 triaged:/completed:/due:
+- templates/capture.md 加 triaged:/triage_target:
+- AGENTS.md task 必填欄位對齊

@@ -16,7 +16,7 @@ _單頁工作台。動態資料由 Dataview / Tasks plugin 自動拉取。_
 
 ```dataview
 TASK
-FROM "tasks"
+FROM "wiki/tasks"
 WHERE !completed AND due AND due < date(today)
 SORT due ASC
 ```
@@ -29,7 +29,7 @@ SORT due ASC
 
 ```dataview
 TASK
-FROM "tasks"
+FROM "wiki/tasks"
 WHERE !completed AND due = date(today)
 SORT priority DESC, due ASC
 ```
@@ -38,7 +38,7 @@ SORT priority DESC, due ASC
 
 ```dataview
 LIST
-FROM "calendar/synced"
+FROM "wiki/calendar/synced"
 WHERE contains(file.name, "<% tp.date.now('YYYY-MM-DD') %>")
 SORT startTime ASC
 ```
@@ -49,7 +49,7 @@ SORT startTime ASC
 
 ```dataview
 TASK
-FROM "tasks"
+FROM "wiki/tasks"
 WHERE !completed AND due AND due > date(today) AND due <= date(today) + dur(7 days)
 GROUP BY due
 SORT due ASC
@@ -61,7 +61,7 @@ SORT due ASC
 
 ```dataview
 TASK
-FROM "tasks/next"
+FROM "wiki/tasks/next"
 WHERE !completed
 SORT priority DESC, due ASC
 LIMIT 5
@@ -73,7 +73,7 @@ LIMIT 5
 
 ```dataview
 TASK
-FROM "tasks/waiting"
+FROM "wiki/tasks/waiting"
 WHERE !completed
 SORT file.ctime ASC
 ```
@@ -84,7 +84,7 @@ SORT file.ctime ASC
 
 ```dataview
 TABLE status, due, area
-FROM "projects"
+FROM "wiki/projects"
 WHERE status = "active"
 SORT file.mtime DESC
 ```
@@ -95,7 +95,7 @@ SORT file.mtime DESC
 
 ```dataview
 LIST
-FROM "tasks/done"
+FROM "wiki/tasks/done"
 WHERE file.cday >= date(today) - dur(7 days)
 SORT file.cday DESC
 ```
@@ -107,6 +107,7 @@ SORT file.cday DESC
 ```dataview
 LIST
 FROM "raw/captures"
+WHERE triaged = null OR !triaged
 SORT file.cday DESC
 LIMIT 10
 ```
@@ -117,7 +118,7 @@ LIMIT 10
 
 ## 🔧 快速連結
 
-- [[wiki/daily/<% tp.date.now('YYYY-MM-DD') %>|今日 Daily Note]]
+- **今天的 Daily Note:[[wiki/daily/2026-10-02|2026-10-02]]** (打開 daily/ 找今天日期)
 - [[wiki/tasks/README|所有 Tasks]]
 - [[wiki/calendar/README|所有 Calendar]]
 - [[wiki/projects/README|所有 Projects]]

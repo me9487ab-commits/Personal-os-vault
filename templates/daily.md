@@ -9,15 +9,15 @@ type: daily
 
 \`\`\`dataview
 TASK
-FROM "tasks"
-WHERE due = date(<% tp.date.now("YYYY-MM-DD") %>) AND status != "done"
+FROM "wiki/tasks"
+WHERE due = date(<% tp.date.now("YYYY-MM-DD") %>) AND !completed
 \`\`\`
 
 ## 過期 task
 
 \`\`\`dataview
 TASK
-FROM "tasks"
+FROM "wiki/tasks"
 WHERE due < date(<% tp.date.now("YYYY-MM-DD") %>) AND status != "done"
 SORT due ASC
 \`\`\`
@@ -26,7 +26,7 @@ SORT due ASC
 
 \`\`\`dataview
 TASK
-FROM "tasks"
+FROM "wiki/tasks"
 WHERE due >= date(<% tp.date.now("YYYY-MM-DD") %>) AND due <= date(<% tp.date.now("YYYY-MM-DD", 7) %>) AND status != "done"
 SORT due ASC
 \`\`\`
@@ -35,7 +35,7 @@ SORT due ASC
 
 \`\`\`dataview
 LIST
-FROM "projects"
+FROM "wiki/projects"
 WHERE status = "active"
 SORT file.mtime DESC
 \`\`\`

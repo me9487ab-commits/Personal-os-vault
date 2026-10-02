@@ -1,9 +1,10 @@
 ---
 type: recurring-event
-title: "<% tp.file.title %>"
-start-time: "HH:MM"
-duration: "30min"
-days: [mon]
+title: <% tp.file.title %>
+start-time: HH:MM
+duration: 30min
+days:
+  - mon
 start-date: <% tp.date.now("YYYY-MM-DD") %>
 end-date:
 location: ""

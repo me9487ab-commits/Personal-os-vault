@@ -104,7 +104,7 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 
 | 類型 | 必填欄位 | 模板 |
 |---|---|---|
-| task | `date`, `type`, `status` | [[templates/task]] |
+| task | `date`, `type` | [[templates/task]] |
 | project | `type`, `status`, `area` | [[templates/project]] |
 | area | `type`, `status` | [[templates/area]] |
 | daily | `date`, `type` | [[templates/daily]] |

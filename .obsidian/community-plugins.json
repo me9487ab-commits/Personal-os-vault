@@ -1,3 +1,8 @@
 [
-  "fast-note-sync"
+  "fast-note-sync",
+  "templater",
+  "dataview",
+  "obsidian-tasks",
+  "quickadd",
+  "calendar"
 ]
