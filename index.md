@@ -11,7 +11,7 @@ type: index
 
 - [[raw/README]] — 不可變 inbox
 - [[tasks/README]] — Tasks (GTD)
-- [[calendar/README]] — 行事曆
+- [[calendar/README]] — 行事曆（event / recurring-event / daily 三種檔案類型）
 - [[projects/README]] — Projects
 - [[areas/README]] — Areas (PARA)
 - [[resources/README]] — Resources (PARA)
