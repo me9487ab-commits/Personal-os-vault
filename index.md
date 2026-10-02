@@ -15,16 +15,16 @@ type: index
 - [[raw/README]] — captures / emails/drafts / external
 - 一旦寫入就不修改，所有東西先丟這
 
-### Layer 2 — working data（互相 wikilink 串連）
+### Layer 2 — wiki/（互相 wikilink 串連的資料網絡）
 
 | 資料夾 | 角色 | 方法論 |
 |---|---|---|
-| [[tasks/README]] | 任務管理 | GTD 簡化 |
-| [[calendar/README]] | 行事曆 | event / recurring-event / daily-calendar |
-| [[projects/README]] | Project（有 deadline） | PARA |
-| [[areas/README]] | Area（無 deadline） | PARA |
-| [[daily/README]] | 每日 reflection | 1 日 1 檔 |
-| [[archives/README]] | 封存 | 不進 daily brief |
+| [[wiki/[[tasks/README]] | 任務管理 | GTD 簡化 |
+| [[wiki/[[calendar/README]] | 行事曆 | event / recurring-event / daily-calendar |
+| [[wiki/[[projects/README]] | Project（有 deadline） | PARA |
+| [[wiki/[[areas/README]] | Area（無 deadline） | PARA |
+| [[wiki/[[daily/README]] | 每日 reflection | 1 日 1 檔 |
+| [[wiki/[[archives/README]] | 封存 | 不進 daily brief |
 
 ### Layer 3 — meta
 - [[index|index.md]] — 本檔

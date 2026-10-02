@@ -24,3 +24,10 @@ Append-only 操作記錄。
 - 範圍最終定案：不含 wiki/（不存知識管理）與 resources/（PARA 的資源類）
 - 知識管理統一歸 LLM-Wiki vault
 - index.md 移除對應 wikilink
+
+## [2026-10-02] restructure | working data 全部包入 wiki/ 容器
+
+Layer 2 重新組織：tasks/calendar/projects/areas/daily/archives → wiki/ 下。
+- raw/ 維持頂層（Layer 1 不可變 inbox）
+- wiki/tasks/, wiki/calendar/, wiki/projects/, wiki/areas/, wiki/daily/, wiki/archives/
+- AGENTS.md、index.md、全部 README.md 的 wikilink 同步更新

@@ -17,7 +17,7 @@ type: meta
 
 ```
 Layer 1 ─ raw/                  不可變 inbox（所有東西先丟這）
-Layer 2 ─ working data          tasks/ calendar/ projects/ areas/ daily/ archives/ 互相 wikilink
+Layer 2 ─ wiki/                tasks/ calendar/ projects/ areas/ daily/ archives/ 互相 wikilink
 Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 ```
 
@@ -29,12 +29,12 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 ### Layer 2 — working data（互相串連）
 | 資料夾 | 角色 | 方法論 |
 |---|---|---|
-| [[tasks/README\|tasks/]] | 任務管理 | GTD 簡化 |
-| [[calendar/README\|calendar/]] | 行事曆 | 三種檔案類型 schema |
-| [[projects/README\|projects/]] | 有 deadline 的專案 | PARA |
-| [[areas/README\|areas/]] | 無 deadline 的持續責任 | PARA |
-| [[daily/README\|daily/]] | 每日 reflection | 1 日 1 檔 |
-| [[archives/README\|archives/]] | 封存 | 不進 daily brief |
+| [[wiki/[[tasks/README\|tasks/]] | 任務管理 | GTD 簡化 |
+| [[wiki/[[calendar/README\|calendar/]] | 行事曆 | 三種檔案類型 schema |
+| [[wiki/[[projects/README\|projects/]] | 有 deadline 的專案 | PARA |
+| [[wiki/[[areas/README\|areas/]] | 無 deadline 的持續責任 | PARA |
+| [[wiki/[[daily/README\|daily/]] | 每日 reflection | 1 日 1 檔 |
+| [[wiki/[[archives/README\|archives/]] | 封存 | 不進 daily brief |
 
 互相之間用 [[wikilinks]] 串：
 - task 透過 frontmatter `project:` 欄位連到 [[templates/project]]

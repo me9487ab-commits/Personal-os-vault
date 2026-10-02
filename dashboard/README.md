@@ -117,11 +117,11 @@ LIMIT 10
 
 ## 🔧 快速連結
 
-- [[daily/<% tp.date.now('YYYY-MM-DD') %>|今日 Daily Note]]
-- [[tasks/README|所有 Tasks]]
-- [[calendar/README|所有 Calendar]]
-- [[projects/README|所有 Projects]]
-- [[areas/README|所有 Areas]]
+- [[wiki/[[daily/<% tp.date.now('YYYY-MM-DD') %>|今日 Daily Note]]
+- [[wiki/[[tasks/README|所有 Tasks]]
+- [[wiki/[[calendar/README|所有 Calendar]]
+- [[wiki/[[projects/README|所有 Projects]]
+- [[wiki/[[areas/README|所有 Areas]]
 - [[raw/captures|新增 Capture →]]
 - [[AGENTS|操作準則]]
 - [[index|Index]]
