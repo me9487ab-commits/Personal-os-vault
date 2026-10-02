@@ -18,3 +18,9 @@ Append-only 操作記錄。
 - index.md：三層架構呈現、不列 wiki/ resources/
 - 各資料夾 README.md：與 calendar/README.md 同風格
 - dashboard/README.md：wikilink 改為指向 Layer 2 資料夾、移除 resources
+
+## [2026-10-02] cleanup | 刪除 wiki/ 與 resources/ 資料夾
+
+- 範圍最終定案：不含 wiki/（不存知識管理）與 resources/（PARA 的資源類）
+- 知識管理統一歸 LLM-Wiki vault
+- index.md 移除對應 wikilink
