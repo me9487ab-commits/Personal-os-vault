@@ -60,7 +60,6 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 ### 1. Capture
 新東西一律進 `raw/captures/`。
 - 語音轉文字、隨手記、截圖 → `raw/captures/`
-- AI 寫的 email reply draft → `raw/emails/drafts/`
 - 從外部 ingest（網頁、書摘）→ `raw/external/`
 
 原則：**capture 不分類，先丟再說**。
