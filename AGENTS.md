@@ -165,7 +165,7 @@ Layer 3 ─ meta                  index.md + log.md + AGENTS.md
 | 類型 | 必填欄位 | 模板 | `status` 欄位 |
 |---|---|---|---|
 | task | `date`, `type` | [[templates/task]] | ❌ **NO**（Method B：folder = 狀態）|
-| project | `type`, `area` | [[templates/project]] | ✅ `active` / `paused` / `completed` / `cancelled` |
+| project | `type` | [[templates/project]] | ✅ `active` / `paused` / `completed` / `cancelled` (area opt-in，見下) |
 | area | `type` | [[templates/area]] | ✅ `active` / `dormant` |
 | daily | `date`, `type` | [[templates/daily]] | ❌ N/A |
 | capture | `date`, `type`, `source:` | [[templates/capture]] | ❌ N/A |
@@ -195,6 +195,17 @@ Method B 只對 **task** 強制（folder = 狀態）。其他類型的 `status` 
 | daily / capture / recurring-event | | ✓ | N/A |
 
 **Reasoning**: task 是 vault 裡最會流動的類型，所以用 folder 編碼狀態最高效。project / area / event 檔案不常移動位置，所以用 `status` 欄位管理 lifecycle 比較直觀。
+
+### `area` 欄位 opt-in（僅 project）
+
+**Project 的 `area:` 是 opt-in**，不是必填：
+
+- **為什麼 optional**：不是每個 project 都歸到某個 area。例：一次性學習 project、跨領域 side project、個人 side project（無明確「職涯 / 健康 / 財務」對應）
+- **SHOULD** 填：當 project 明確歸屬某個 area（例：「減肥計畫」→ area: health）
+- **MAY** 留空：project 是獨立 / 跨域 / 一次性
+- **Template 設定**：`templates/project.md` 已將 `area:` 預設為空
+
+> 其他類型（如 task）的 `area:` 沿用既有規定（task 用 frontmatter 欄位連到 area）。
 
 ## Areas vs Projects 判斷
 
