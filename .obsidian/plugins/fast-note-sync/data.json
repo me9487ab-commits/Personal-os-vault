@@ -2,6 +2,9 @@
   "syncEnabled": true,
   "configSyncEnabled": false,
   "logEnabled": "off",
+  "api": "http://140.112.244.110:9000",
+  "apiToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsIm5pY2tuYW1lIjoiIiwidG9rZW5JZCI6MzAsIm5vbmNlIjoiVTRqQWUyZGc4OHhCM2oxMiIsImlzcyI6ImZhc3Qtbm90ZS1zeW5jLXNlcnZpY2UiLCJzdWIiOiJ1c2VyLXRva2VuIiwiZXhwIjoxODIyNDU3NTA1LCJuYmYiOjE3OTA5MjE1MDUsImlhdCI6MTc5MDkyMTUwNSwianRpIjoiMSJ9.4wDXeg4ysouCi18R9C7fQ6pP4pOiyh0545A94UHE2hA",
+  "vault": "Personal-os",
   "startupDelay": 500,
   "offlineSyncStrategy": "",
   "syncExcludeFolders": "[{\"pattern\":\".obsidian/community-plugins.json\",\"caseSensitive\":false}]",
@@ -32,7 +35,9 @@
   "maxConcurrentUploads": 20,
   "showConcurrencyIndicator": true,
   "showSyncIndicator": false,
+  "autoRedirectEnabled": true,
   "allowedRedirectDomains": "",
+  "wsPreProbeEnabled": true,
   "mobileToastTop": 110,
   "mobileBlurPauseEnabled": true,
   "binarySyncLimitEnabled": true,
@@ -41,8 +46,5 @@
   "attachmentSyncLimit": 50,
   "hashSyncLimitEnabled": false,
   "hashSyncLimit": 50000,
-  "largeFileNoticeShown": [],
-  "apiToken": "fns-enc2:9a86b5979db89c96b096b5b6aa85b6ceb196b68cb691adca9cbcb6c9b6948fa7a9bcb5c6d19a86b5ce9ea8ae96b095ba8cb692ca8fa6cd8b8aa6a8ce93b6959096b69688969bb8c68da5a8cab5a5bcb6c9b285be8cb692ca899d92b193b6959096a9abad8eaea8aa86a5b89ccbb0b797bcb2cd9087b296b68cb69293859c86b6c9b692a5979cccae8b9d92c6cfa5acce859aa8ca95b3a7b1939c91a58fa6cdaa96b3bcb5859ba8b696b096b5ce9ccda986b3a7ad899ecda98ab6968896a5a79788b6959087b0bbb686b1bbaaccb1abbeceb3bcb58aa692a696b095baccb0abbecab295baceb2bbaa8cb69293979bbcb6c9b2ab9ccab2bb9486b2abaa88b1ac88969e91ad8fb6959096b2acb5c6d1cb88bba79a98cb868c908abc96cec7adc6bcc899aec98fafcb8fb0968697cfcacbcabec6cbaab7bacd97be",
-  "api": "http://140.112.244.110:9000",
-  "vault": "Personal-os"
+  "largeFileNoticeShown": []
 }
