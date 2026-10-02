@@ -71,7 +71,7 @@ tags: [personal, long-term]
 - <LLM-Wiki topic 連結（外部 markdown 連結）>
 ```
 
-> 知識庫段落**只放 wikilink 指向 LLM-Wiki vault**，不放知識內容本身。知識管理歸 LLM-Wiki。
+> 知識庫段落**只放 wikilink 指向 LLM-Wiki vault**，不放知識內容本身。書摘、學習筆記、topic wiki 歸 LLM-Wiki。
 
 ## Review 頻率
 
