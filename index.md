@@ -1,47 +1,109 @@
+# Vault Index
+
+Wikilinks only — never describe content here. Each entry links to a page that lives somewhere in `wiki/` (or `raw/` for sources).
+
+The 5 page categories (Knowledge-base mode) and the Personal-OS sections (Tasks / Calendar / Projects / Areas / Daily) are kept separate. Pick the sections that fit your workflow.
+
 ---
-date: 2026-10-02
-type: index
+
+## Entities
+
+(Specific things: persons, projects, systems, tools, organizations.)
+
+- *(add entries here as `[[page-name]] — short note`)*
+
 ---
 
-# Personal OS Index
+## Concepts
 
-個人作業系統 vault。涵蓋**任務管理、行事曆、Project 追蹤、Areas 持續責任、Email 整合、每日 reflection**。
+(General topics, theories, methods, abstractions, definitions.)
 
-> 書摘、學習筆記、topic wiki 歸 LLM-Wiki vault，不在本 vault 範圍。
+- *(add entries here as `[[page-name]] — short note`)*
 
-## 三層架構
+---
 
-### Layer 1 — raw/（不可變 inbox）
-- [[raw/README]] — captures / emails/drafts / external
-- 一旦寫入就不修改，所有東西先丟這
+## Overviews
 
-### Layer 2 — wiki/（互相 wikilink 串連的資料網絡）
+(Big-picture summaries tying multiple concepts together.)
 
-| 資料夾 | 角色 | 方法論 |
-|---|---|---|
-| [[wiki/tasks/README]] | 任務管理 | GTD 簡化 |
-| [[wiki/calendar/README]] | 行事曆 | event / recurring-event / daily-calendar |
-| [[wiki/projects/README]] | Project（有 deadline） | PARA |
-| [[wiki/areas/README]] | Area（無 deadline） | PARA |
-| [[wiki/daily/README]] | 每日 reflection | 1 日 1 檔 |
-| [[wiki/archives/README]] | 封存 | 不進 daily brief |
+- *(add entries here)*
 
-### Layer 3 — meta
-- [[index|index.md]] — 本檔
-- [[log|log.md]] — append-only 變更記錄
-- [[AGENTS|AGENTS.md]] — 代理 / 協作準則
+---
 
-## Tooling
-- [[dashboard/README]] — Obsidian 工作台單頁
-- [[templates/]] — Templater 模板
-- [[scripts/]] — 自動化腳本
+## Comparisons
 
-## Workflow 入口
-1. **Capture** → 丟 [[raw/README]] 對應子資料夾
-2. **Triage** → 從 [[raw/README|captures]] 分流到 Layer 2
-3. **Daily Brief** → 打開 `daily/YYYY-MM-DD.md`
-4. **Review** → 見 [[AGENTS#workflow]]
+(Side-by-side analyses of two or more things.)
 
-## 規範
-- [[AGENTS]] — 完整準則、命名、frontmatter
-- [[log]] — 近期變更
+- *(add entries here)*
+
+---
+
+## Summaries
+
+(Condensed versions of long sources.)
+
+- *(add entries here)*
+
+---
+
+## Lessons
+
+(Durable pitfalls / #LABEL cards. Write only what you actually tripped on.)
+
+- *(add entries here)*
+
+---
+
+## Tasks
+
+(Active work. Inbox first; promote to next; archive to done.)
+
+### Inbox
+
+`(Dataview query — captures needing triage)`
+
+### Next
+
+`(Dataview query — active tasks)`
+
+### Waiting
+
+`(Dataview query — blocked-on tasks)`
+
+### Done
+
+`(Dataview query — completed)`
+
+---
+
+## Calendar
+
+### Daily
+
+### Recurring
+
+### Synced
+
+---
+
+## Projects
+
+(One folder per project under `wiki/projects/<slug>/`.)
+
+- *(add entries here as `[[project-slug]] — short note`)*
+
+---
+
+## Areas
+
+(Ongoing responsibilities under `wiki/areas/`.)
+
+- *(add entries here as `[[area-slug]] — short note`)*
+
+---
+
+## Daily Notes
+
+(One file per day: `wiki/daily/YYYY-MM-DD.md`.)
+
+- *(no index needed — daily notes are temporal; Obsidian calendar / Dataview surfaces them)*

@@ -1,61 +1,49 @@
-# Log
+# Operation Log
 
-Append-only 操作記錄。
+Chronological, append-only record of changes to this vault.
 
-## [2026-10-02] init | 建立 Personal-OS vault
+Each entry:
 
-## [2026-10-02] schema | 行事曆資料庫 schema（event / recurring-event / daily）
-- 2 個 templates（event, recurring-event）
-- 1 個範例（weekly-standup）
-- calendar/README.md 重寫為 schema doc
+```
+## [YYYY-MM-DD] <type> | <short description>
 
-## [2026-10-02] docs | AGENTS + READMEs + index 對齊三層架構
-- 決定三層架構：Layer 1 raw/、Layer 2 working data、Layer 3 meta
-- 決定範圍：Task / Calendar / Project / Area / Daily / Email 整合；知識管理歸 LLM-Wiki vault
-- 留下 10 個資料夾：raw/ tasks/ calendar/ projects/ areas/ daily/ archives/ dashboard/ templates/ scripts/
-- 待刪：wiki/、resources/（留待實作階段處理）
-- AGENTS.md：移除知識管理字眼、加入三層架構、workflow、命名 / frontmatter 規範
-- index.md：三層架構呈現、不列 wiki/ resources/
-- 各資料夾 README.md：與 calendar/README.md 同風格
-- dashboard/README.md：wikilink 改為指向 Layer 2 資料夾、移除 resources
+- bullet describing what changed
+- bullet describing another change
+- file: path/to/file.md
+```
 
-## [2026-10-02] cleanup | 刪除 wiki/ 與 resources/ 資料夾
+`<type>` is one of:
 
-- 範圍最終定案：不含 wiki/（不存知識管理）與 resources/（PARA 的資源類）
-- 知識管理統一歸 LLM-Wiki vault
-- index.md 移除對應 wikilink
+| Type | Use for |
+|---|---|
+| `init` | Initial scaffold / new vault setup |
+| `docs` | AGENTS.md / README / index.md edits |
+| `schema` | Frontmatter schemas, folder structure changes |
+| `test` | Importing test data (then clean up with `cleanup`) |
+| `sim` | Simulator runs / agent exercises |
+| `dashboard` | Home / Dataview queries |
+| `plugins` | Plugin install / enable / config |
+| `cleanup` | Removing test data, empty files, leftovers |
+| `fix` | Bug fixes, broken links, typos |
+| `restructure` | Folder / file relocation |
+| `task` | New / completed / moved task |
+| `area` | New / edited area page |
+| `project` | New / edited project page |
+| `capture` | New capture moved from raw to wiki |
+| `ingest` | Raw → wiki ingest of a source |
+| `lesson` | New #lesson card |
+| `comparison` | New comparison page |
+| `overview` | New overview page |
 
-## [2026-10-02] restructure | working data 全部包入 wiki/ 容器
+---
 
-Layer 2 重新組織：tasks/calendar/projects/areas/daily/archives → wiki/ 下。
-- raw/ 維持頂層（Layer 1 不可變 inbox）
-- wiki/tasks/, wiki/calendar/, wiki/projects/, wiki/areas/, wiki/daily/, wiki/archives/
-- AGENTS.md、index.md、全部 README.md 的 wikilink 同步更新
+## [YYYY-MM-DD] init | vault-template skeleton
 
+- Add AGENTS.md (operations manual)
+- Add 7 templates under `templates/` (area, capture, daily, event, project, recurring-event, task)
+- Add `.obsidian/` config: app.json, community-plugins.json, core-plugins.json
+- Add 4 plugin data.json: dataview, obsidian-tasks, quickadd, templater
+- Create folder skeleton: `raw/{captures,emails,drafts,external}/` + `wiki/{tasks,calendar,projects,areas,daily,archives}/`
+- Add README.md, index.md (skeleton), log.md (this file)
 
-## [2026-10-02] plugins | 安裝 5 個 Obsidian community plugins + 設定 + 修漏洞
-
-### 安裝
-- templater 2.25.1
-- dataview 0.5.70
-- obsidian-tasks 8.4.0
-- quickadd 2.29.0
-- calendar (liamcain) 2.0.0-beta.2
-
-### 啟用 Obsidian core plugins
-- Calendar、Daily Notes、Templates 跟其他常用 core plugins
-
-### 設定
-- templatesFolder = templates/
-- dailyNotesFolder = wiki/daily
-- dailyNoteTemplate = templates/daily.md
-- QuickAdd 5 macro: Capture / Task / Event / Project / Daily
-
-### 修的漏洞
-- Dataview query 路徑全改 wiki/ 前綴
-- 建立 wiki/tasks/done/
-- INBOX query 加 triaged:null 過濾
-- templates/daily.md query 語意修
-- templates/task.md 移除 status 預設（方法 B：位置決定狀態），加 triaged:/completed:/due:
-- templates/capture.md 加 triaged:/triage_target:
-- AGENTS.md task 必填欄位對齊
+Reusable Obsidian vault skeleton. Adapt the wiki/ folder layout to match your workflow.
