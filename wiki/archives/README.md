@@ -10,8 +10,8 @@ type: readme
 
 | 子資料夾 | 來源 | 歸檔時機 |
 |---|---|---|
-| `projects/` | [[wiki/[[projects/README\|projects/]] | project `status: completed` 或 `cancelled` |
-| `tasks/` | [[wiki/[[tasks/README\|tasks/]] | 每月初把上個月 `tasks/done/YYYY-MM/` 移到這 |
+| `projects/` | [[wiki/projects/README\|projects/]] | project `status: completed` 或 `cancelled` |
+| `tasks/` | [[wiki/tasks/README\|tasks/]] | 每月初把上個月 `tasks/done/YYYY-MM/` 移到這 |
 
 ## 命名規範
 

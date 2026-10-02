@@ -72,7 +72,7 @@ type: readme
 
 ## 範例
 
-- [[wiki/[[calendar/recurring/weekly-standup|Weekly standup 範例]]
+- [[wiki/calendar/recurring/weekly-standup|Weekly standup 範例]]
 - `calendar/synced/2026-10-02-14-00-cs-meeting.md`（sync 進來的會議）
 
 ## 不做的事

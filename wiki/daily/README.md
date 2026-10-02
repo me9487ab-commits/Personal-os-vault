@@ -18,11 +18,11 @@ type: readme
 
 | 區塊 | 來源 |
 |---|---|
-| 今天要做的 task | [[wiki/[[tasks/README\|tasks/]] + `due = today` |
-| 過期 task | [[wiki/[[tasks/README\|tasks/]] + `due < today` |
-| 本週 deadline | [[wiki/[[tasks/README\|tasks/]] + `due` 在本週內 |
-| 活躍 project | [[wiki/[[projects/README\|projects/]] + `status = active` |
-| 今日事件 | [[wiki/[[calendar/README\|calendar/]] 對應日期 |
+| 今天要做的 task | [[wiki/tasks/README\|tasks/]] + `due = today` |
+| 過期 task | [[wiki/tasks/README\|tasks/]] + `due < today` |
+| 本週 deadline | [[wiki/tasks/README\|tasks/]] + `due` 在本週內 |
+| 活躍 project | [[wiki/projects/README\|projects/]] + `status = active` |
+| 今日事件 | [[wiki/calendar/README\|calendar/]] 對應日期 |
 
 ## 手寫區塊
 

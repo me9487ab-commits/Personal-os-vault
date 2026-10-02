@@ -14,7 +14,7 @@ GTD 簡化版任務管理。Layer 2 的工作區之一。
 | `next/` | 今天該做、可行動的 task |
 | `waiting/` | 等別人回覆、被 block |
 | `someday/` | 暫不做但保留（maybe / later） |
-| `done/YYYY-MM/` | 完成（按月歸檔，月初把上月移 [[wiki/[[archives/README]]） |
+| `done/YYYY-MM/` | 完成（按月歸檔，月初把上月移 [[wiki/archives/README]]） |
 
 ## Frontmatter Schema
 
@@ -29,8 +29,8 @@ GTD 簡化版任務管理。Layer 2 的工作區之一。
 | `context` | | 情境（@home / @work / @errand） |
 | `energy` | | `low` / `medium` / `high` |
 | `time-estimate` | | `15min` / `30min` / `1h` ... |
-| `project` | | 對應 [[wiki/[[projects/README\|project 名稱]] |
-| `area` | | 對應 [[wiki/[[areas/README\|area 名稱]] |
+| `project` | | 對應 [[wiki/projects/README\|project 名稱]] |
+| `area` | | 對應 [[wiki/areas/README\|area 名稱]] |
 | `source` | | triage 出處（`raw/captures/...`） |
 | `due` | | deadline (YYYY-MM-DD) |
 | `priority` | | `high` / `medium` / `low` |

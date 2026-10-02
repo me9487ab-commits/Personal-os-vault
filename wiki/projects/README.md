@@ -16,7 +16,7 @@ projects/<project-slug>/
 └── notes.md        # 筆記、研究、參考
 ```
 
-> task 本身仍住在 [[wiki/[[tasks/README|tasks/]]，透過 frontmatter `project:` 欄位連結到這。
+> task 本身仍住在 [[wiki/tasks/README|tasks/]]，透過 frontmatter `project:` 欄位連結到這。
 > `tasks.md` 與 `notes.md` 是輔助彙總頁，task 主體還是要在 `tasks/`。
 
 ## Frontmatter Schema
@@ -28,7 +28,7 @@ projects/<project-slug>/
 | `date` | | 建立日期 |
 | `type` | ✓ | `project` |
 | `status` | ✓ | `active` / `paused` / `completed` / `cancelled` |
-| `area` | | 對應 [[wiki/[[areas/README\|area]] |
+| `area` | | 對應 [[wiki/areas/README\|area]] |
 | `due` | | deadline (YYYY-MM-DD) |
 | `tags` | | 標籤 |
 
@@ -40,7 +40,7 @@ projects/<project-slug>/
                                     archives/projects/
 ```
 
-- 完成 / 取消時，把整個資料夾移到 [[wiki/[[archives/README|archives/projects/]]
+- 完成 / 取消時，把整個資料夾移到 [[wiki/archives/README|archives/projects/]]
 - 移到 archives 時 frontmatter 加上 `archived: YYYY-MM-DD`
 
 ## 命名規範

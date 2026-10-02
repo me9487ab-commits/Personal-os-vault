@@ -78,4 +78,4 @@ tags: [personal, long-term]
 每季 review 一次（見 [[AGENTS#workflow]]），確認：
 - `status: active` 仍是合理的
 - 「近期重點」有在動
-- 對應的 task 有在 [[wiki/[[tasks/README|tasks/]] 流動
+- 對應的 task 有在 [[wiki/tasks/README|tasks/]] 流動

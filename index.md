@@ -19,12 +19,12 @@ type: index
 
 | 資料夾 | 角色 | 方法論 |
 |---|---|---|
-| [[wiki/[[tasks/README]] | 任務管理 | GTD 簡化 |
-| [[wiki/[[calendar/README]] | 行事曆 | event / recurring-event / daily-calendar |
-| [[wiki/[[projects/README]] | Project（有 deadline） | PARA |
-| [[wiki/[[areas/README]] | Area（無 deadline） | PARA |
-| [[wiki/[[daily/README]] | 每日 reflection | 1 日 1 檔 |
-| [[wiki/[[archives/README]] | 封存 | 不進 daily brief |
+| [[wiki/tasks/README]] | 任務管理 | GTD 簡化 |
+| [[wiki/calendar/README]] | 行事曆 | event / recurring-event / daily-calendar |
+| [[wiki/projects/README]] | Project（有 deadline） | PARA |
+| [[wiki/areas/README]] | Area（無 deadline） | PARA |
+| [[wiki/daily/README]] | 每日 reflection | 1 日 1 檔 |
+| [[wiki/archives/README]] | 封存 | 不進 daily brief |
 
 ### Layer 3 — meta
 - [[index|index.md]] — 本檔
