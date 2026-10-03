@@ -4,7 +4,7 @@ type: task
 tags: [openclaw, devops]
 energy: medium
 time-estimate: 30min
-project:
+project: engineering-mechanics-3
 area: github-learning
 source: raw/captures/2026-10-03-tomorrow-upgrade-openclaw.md
 due: 2026-10-04

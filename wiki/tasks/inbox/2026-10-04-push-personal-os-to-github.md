@@ -4,7 +4,7 @@ type: task
 tags: [vault/personal-os, devops]
 energy: low
 time-estimate: 10min
-project:
+project: engineering-mechanics-3
 area: github-learning
 source: raw/captures/2026-10-03-tomorrow-push-personal-os.md
 due: 2026-10-04

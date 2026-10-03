@@ -4,7 +4,7 @@ type: task
 tags: [llm-wiki, maintenance]
 energy: high
 time-estimate: 2hr+
-project:
+project: engineering-mechanics-3
 area: github-learning
 source: raw/captures/2026-10-03-fix-llm-wiki-wikilinks.md
 due:
