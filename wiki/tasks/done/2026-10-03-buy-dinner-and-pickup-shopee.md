@@ -1,7 +1,7 @@
 ---
 date: 2026-10-03
 type: task
-status: next
+status: done
 tags: [chore, errands]
 energy: low
 time-estimate: 30min
@@ -11,7 +11,7 @@ source: raw/captures/2026-10-03-evening-plan.md
 due: 2026-10-03
 priority: medium
 triaged: 2026-10-03
-completed:
+completed: 2026-10-03
 ---
 
 # 買飯 + 領蝦皮貨
