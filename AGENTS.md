@@ -107,6 +107,7 @@ Every task in wiki/tasks/** has a status: field (required). The folder the file 
 | someday | wiki/tasks/someday/ | Maybe later |
 | done | wiki/tasks/done/YYYY-MM/ | Completed (set completed: date) |
 | cancelled | archives/tasks/ | Will not do |
+| recurring | wiki/calendar/recurring/ | Habits / routines (NOT a task). Tracked via daily notes. |
 
 Captures in raw/captures/ are pre-task. Use triaged: + triage_target: for status tracking.
 
@@ -123,6 +124,10 @@ New stuff always goes to `raw/` first (root or subfolder, see § raw/ two-layer 
 - AI-written email reply drafts → `raw/emails/` *(if that opt-in folder exists)*
 
 **Rule: capture without classification. Triage later.** If a target subfolder doesn't exist (e.g. `raw/emails/` not enabled), leave the file in `raw/` root until you decide.
+
+**Recurring rules** belong in `wiki/calendar/recurring/` (not `raw/`). When
+defining a new habit, capture it straight there with `type: recurring`
+frontmatter; do not write a one-off task for each occurrence.
 
 #### 2. Triage
 
@@ -154,6 +159,40 @@ Open `wiki/daily/YYYY-MM-DD.md` each morning. Templater + Dataview auto-pull:
 | Weekly | Review `tasks/next/` + `tasks/waiting/`, verify `calendar/recurring/` |
 | Monthly | Move old `tasks/done/` → `archives/tasks/`, review all `projects/` status |
 | Quarterly | Review all `areas/`, confirm each has recent focus |
+
+### 5. Recurring habits
+
+Some obligations repeat on a schedule but are **not tasks** — they are habits
+(routine behaviors that sustain you). Track them in `wiki/calendar/recurring/`
+(e.g. `habits.md`), not in `wiki/tasks/`.
+
+**Difference from a task:**
+- A task has a clear "done" moment (commit, deliverable, decision).
+- A habit is a recurring behavior with no single completion (e.g. take
+  supplements, exercise, journal).
+
+**How to track:**
+
+1. **Define the rule** in `wiki/calendar/recurring/<topic>.md` with frontmatter:
+   `type: recurring`, `title:`, `frequency:` (`daily` / `every-N-days` /
+   `weekdays` / `Mon,Wed,Fri`), `check-state:`, `reminder:`.
+2. **Surface in daily notes** (`wiki/daily/YYYY-MM-DD.md`) via
+   `## Recurring` section auto-generated from habit files.
+3. **Status updates**: agent runs SOP-Daily-Brief each morning; user
+   confirms with "吃了 / 去了 / done" replies.
+
+**Rules:**
+- ❌ Do NOT create habit files in `wiki/tasks/` — habits have no single
+  "done" event.
+- ❌ Do NOT use `recurring-event` type for habits — that is for scheduled
+  appointments with a fixed time (e.g. doctor visit every Tuesday 10am).
+- ✅ One habit file per topic (e.g. `habits.md`, `exercise.md`).
+- ✅ Pause a habit by setting `status: paused` (agent skips paused habits).
+- ✅ When a habit becomes a project, migrate to `wiki/projects/<project>/`
+  and link back to the habit file.
+
+For detailed algorithms (every-N-days math, supplement 2x/day prompting,
+daily-note generation), see `wiki/calendar/recurring/README.md`.
 
 ---
 
@@ -286,6 +325,9 @@ The capture file in `raw/captures/` records which wiki pages were produced from 
 - ❌ Put book notes / study notes / topic wiki into this vault — knowledge work is not in Personal-OS scope
 - ❌ Add a status: field that contradicts folder location (e.g. status: next in inbox/)
 - ❌ Leave `raw/` root backlog unprocessed for long periods (defeats the uncategorized buffer purpose)
+
+- ❌ Track habits as tasks in `wiki/tasks/` — habits are not deliverables;
+  use `wiki/calendar/recurring/` + daily note checkboxes instead.
 
 ---
 
