@@ -6,7 +6,7 @@ energy: high
 time-estimate: 2hr+
 project:
 area: github-learning
-source:
+source: raw/captures/2026-10-03-fix-llm-wiki-wikilinks.md
 due:
 priority: low
 triaged: 2026-10-03

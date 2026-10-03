@@ -6,7 +6,7 @@ energy: low
 time-estimate: 10min
 project:
 area: github-learning
-source:
+source: raw/captures/2026-10-03-tomorrow-push-personal-os.md
 due: 2026-10-04
 priority: high
 triaged: 2026-10-03

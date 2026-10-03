@@ -6,7 +6,7 @@ energy: high
 time-estimate: 2h
 project: engineering-mechanics-3
 area: ntu-esoe-2006
-source:
+source: raw/captures/2026-10-03-engineering-mechanics-ch1.md
 due: 2026-10-03
 priority: high
 triaged: 2026-10-02

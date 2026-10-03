@@ -6,7 +6,7 @@ energy: medium
 time-estimate: 30min
 project:
 area: github-learning
-source:
+source: raw/captures/2026-10-03-tomorrow-upgrade-openclaw.md
 due: 2026-10-04
 priority: high
 triaged: 2026-10-03
