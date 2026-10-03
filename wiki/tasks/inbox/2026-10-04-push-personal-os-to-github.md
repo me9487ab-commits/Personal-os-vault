@@ -1,6 +1,7 @@
 ---
 date: 2026-10-03
 type: task
+status: inbox
 tags: [vault/personal-os, devops]
 energy: low
 time-estimate: 10min

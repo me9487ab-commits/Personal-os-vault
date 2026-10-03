@@ -1,6 +1,7 @@
 ---
 date: 2026-10-03
 type: task
+status: next
 tags: [study, course, urgent]
 energy: high
 time-estimate: 2h

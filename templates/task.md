@@ -1,6 +1,7 @@
 ---
 date: <% tp.date.now("YYYY-MM-DD") %>
 type: task
+status: inbox
 tags: []
 context: []
 energy: medium

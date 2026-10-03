@@ -1,6 +1,7 @@
 ---
 date: 2026-10-03
 type: task
+status: someday
 tags: [llm-wiki, maintenance]
 energy: high
 time-estimate: 2hr+

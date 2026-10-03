@@ -1,6 +1,7 @@
 ---
 date: 2026-10-03
 type: task
+status: inbox
 tags: [openclaw, devops]
 energy: medium
 time-estimate: 30min

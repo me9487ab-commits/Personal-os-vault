@@ -2,7 +2,7 @@
 📦 TEMPLATE-NOTE
 This file is the operations manual for the vault-template repo. It covers
 Personal-OS mode (tasks / calendar / projects / areas / daily) plus the
-shared architecture (3-layer model, Method B, raw/ two-layer, SOPs).
+shared architecture (3-layer model, task status enum, raw/ two-layer, SOPs).
 
 When forking this repo for a new vault:
 1. Rename the wiki/ subfolders to fit your taxonomy
@@ -20,7 +20,7 @@ status: active
 
 # AGENTS.md — Operations Manual
 
-> **TL;DR** — Drop uncategorized stuff in `raw/` root, triage to `raw/<sub>/`. Work lives in `wiki/`. Folder location = status (Method B). Commit format: `YYYY-MM-DD <type> | <description>`.
+> **TL;DR** — Drop uncategorized stuff in `raw/` root, triage to `raw/<sub>/`. Work lives in `wiki/`. Use status: enum (see § Task status). Commit format: `YYYY-MM-DD <type> | <description>`.
 
 ---
 
@@ -45,7 +45,7 @@ Layer 3  meta        AGENTS.md + index.md + log.md (schema, map, history)
 | Layer | What lives here | Rule |
 |---|---|---|
 | `raw/` | Your captures + external third-party sources (both required) + emails (opt-in) | **Two sub-layers**: root = uncategorized buffer, subfolders = categorized. `raw/captures/` and `raw/external/` are created by default; `raw/emails/` is opt-in. See § raw/ two-layer model below. |
-| `wiki/` | Tasks, events, projects, areas, daily notes, summaries, entities, concepts | Edit freely. Use wikilinks. Follow Method B for status. |
+| `wiki/` | Tasks, events, projects, areas, daily notes, summaries, entities, concepts | Edit freely. Use wikilinks. Use status: enum (see § Task status). |
 | meta | `AGENTS.md` (this file), `index.md` (map), `log.md` (history) | `index.md` = wikilinks-only, never describe. `log.md` = append-only. |
 
 ---
@@ -95,20 +95,20 @@ To disable any opt-in folder: just delete it. No migration needed — the workfl
 
 ---
 
-## Method B: location = status
+## Task status (enum)
 
-**No `status:` field.** Folder placement encodes state.
+Every task in wiki/tasks/** has a status: field (required). The folder the file lives in should match its status.
 
-| Concept | "Active" location | "Done" location |
+| Status | Folder | Notes |
 |---|---|---|
-| Task (active work) | `wiki/tasks/next/` | `wiki/tasks/done/` |
-| Task (blocked) | `wiki/tasks/waiting/` | `wiki/tasks/done/` (with `resolved:` date) |
-| Task (untriaged) | `raw/captures/YYYY-MM-DD-*.md` | `wiki/tasks/inbox/` (with `triaged:` + `triage_target:`) |
-| Task (maybe later) | `wiki/tasks/someday/` | `wiki/tasks/done/` or `archives/tasks/` |
-| Calendar event (one-time) | `wiki/calendar/synced/` | end date `===` passes |
-| Calendar event (recurring instance) | `wiki/calendar/daily/` | end date passes |
-| Daily note | `wiki/daily/YYYY-MM-DD.md` | today's file exists |
+| inbox | wiki/tasks/inbox/ | Triaged, not yet scheduled |
+| next | wiki/tasks/next/ | Active this week |
+| waiting | wiki/tasks/waiting/ | Blocked on someone/something |
+| someday | wiki/tasks/someday/ | Maybe later |
+| done | wiki/tasks/done/YYYY-MM/ | Completed (set completed: date) |
+| cancelled | archives/tasks/ | Will not do |
 
+Captures in raw/captures/ are pre-task. Use triaged: + triage_target: for status tracking.
 
 ---
 
@@ -284,7 +284,7 @@ The capture file in `raw/captures/` records which wiki pages were produced from 
 - ❌ Use `[[wiki/...]]` path-based wikilinks (use `[[basename]]`)
 - ❌ Skip `log.md` updates — append-only, never rewrite
 - ❌ Put book notes / study notes / topic wiki into this vault — knowledge work is not in Personal-OS scope
-- ❌ Add a `status:` field when Method B (folder location) already encodes it
+- ❌ Add a status: field that contradicts folder location (e.g. status: next in inbox/)
 - ❌ Leave `raw/` root backlog unprocessed for long periods (defeats the uncategorized buffer purpose)
 
 ---

@@ -6,7 +6,22 @@ type: readme
 
 GTD 簡化版任務管理。Layer 2 的工作區之一。
 
-## 子資料夾（GTD 簡化四 + 一）
+## 狀態 (status: enum)
+
+Task 在 frontmatter 有 `status:` 欄位（必填），folder 與 status 對應：
+
+| Status | Folder |
+|---|---|
+| `inbox` | `wiki/tasks/inbox/` |
+| `next` | `wiki/tasks/next/` |
+| `waiting` | `wiki/tasks/waiting/` |
+| `someday` | `wiki/tasks/someday/` |
+| `done` | `wiki/tasks/done/YYYY-MM/` |
+| `cancelled` | `archives/tasks/` |
+
+詳見 [[AGENTS#task-status-enum]]。
+
+## 子資料夾
 
 | 子資料夾 | 用途 |
 |---|---|
@@ -24,10 +39,8 @@ GTD 簡化版任務管理。Layer 2 的工作區之一。
 |---|---|---|
 | `date` | ✓ | 建立日期 (YYYY-MM-DD) |
 | `type` | ✓ | `task` |
+| `status` | ✓ | enum：inbox / next / waiting / someday / done / cancelled |
 | `tags` | | 標籤陣列 |
-
-> **Method B**: task 狀態由檔案位置決定，不在 frontmatter 用 `status` 欄位。
-> `inbox/` / `next/` / `waiting/` / `someday/` / `done/` 就是狀態。
 | `context` | | 情境（@home / @work / @errand） |
 | `energy` | | `low` / `medium` / `high` |
 | `time-estimate` | | `15min` / `30min` / `1h` ... |
@@ -36,12 +49,14 @@ GTD 簡化版任務管理。Layer 2 的工作區之一。
 | `source` | | triage 出處（`raw/captures/...`） |
 | `due` | | deadline (YYYY-MM-DD) |
 | `priority` | | `high` / `medium` / `low` |
+| `triaged` | | capture 被 triage 到 inbox 的日期 |
+| `completed` | | task 完成日期（移到 done/ 時填） |
 
 ## 命名規範
 
 - 檔名：lowercase + dash
 - 動詞開頭（例：`renew-passport.md` 而非 `passport.md`）
-- 完成後移到 `done/YYYY-MM/<原檔名>.md`
+- 完成後移到 `done/YYYY-MM/<原檔名>.md`，frontmatter 加 `completed: YYYY-MM-DD`
 
 ## Wikilink 風格
 
@@ -55,6 +70,7 @@ GTD 簡化版任務管理。Layer 2 的工作區之一。
 ---
 date: 2026-10-02
 type: task
+status: next
 tags: [admin]
 context: [home]
 energy: low
@@ -70,7 +86,7 @@ priority: medium
 ```
 
 > 檔案位置: `wiki/tasks/next/2026-10-02-renew-passport.md`
-> → 狀態 `next` 由 folder 編碼（Method B）
+> → status: next (folder 與 status 對應)
 
 ## 流程
 

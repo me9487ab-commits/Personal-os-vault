@@ -32,7 +32,7 @@ type: readme
 | `status` | ✓ | `active` / `dormant` |
 | `tags` | | 標籤 |
 
-> Area 是 `status: this_type` 不用 Method B（area 是單一檔案不移動 folder）
+> Area 是 `status: this_type` 用 status: enum（area 是單一檔案不移動 folder）
 
 ## 內容結構
 

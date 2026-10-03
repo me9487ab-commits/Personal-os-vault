@@ -1,6 +1,7 @@
 ---
 date: 2026-10-03
 type: task
+status: next
 tags: [chore, errands]
 energy: low
 time-estimate: 30min
@@ -19,5 +20,5 @@ completed:
 今天 2026-10-03 18:00 後（健身後）
 
 ## 細目
-- [ ] 買飯
-- [ ] 領蝦皮貨
+- [x] 買飯
+- [x] 領蝦皮貨 ✅ 2026-10-03

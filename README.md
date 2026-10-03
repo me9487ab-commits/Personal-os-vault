@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Obsidian Vault Template
-Reusable Obsidian vault skeleton for Personal-OS: tasks, calendar, projects, areas, and daily notes - built on a 3-layer architecture (raw/ -> wiki/ -> archive/) with method-based status (Method B: folder location = status).
+Reusable Obsidian vault skeleton for Personal-OS: tasks, calendar, projects, areas, and daily notes - built on a 3-layer architecture (raw/ -> wiki/ -> archive/) with Task status enum (`status:` field on each task; folder mirrors status).
 
 - **`raw/`** — immutable inbox, two sub-layers: root = uncategorized drop zone; subfolders = categorized (`captures/` + `external/` required, `emails/` opt-in). Never edit after writing.
 - **`wiki/`** — linked data network (the work surface; edited and re-edited)
@@ -12,7 +12,7 @@ Reusable Obsidian vault skeleton for Personal-OS: tasks, calendar, projects, are
 - **5 community plugins pre-configured**: Templater, Dataview, obsidian-tasks, QuickAdd, Calendar (liamcain)
 - **7 templates** (in `templates/`): `area`, `capture`, `daily`, `event`, `project`, `recurring-event`, `task`
 - **Folder skeleton** for tasks / calendar / projects / areas / daily / archives
-- **Method B** rule: *location = status* (no `status:` field needed — folder placement says done/waiting/inbox/...)
+- **Task status** enum (`status:` field) — each task has inbox / next / waiting / someday / done / cancelled; folder mirrors status
 - **Commit convention**: `YYYY-MM-DD <type> | <description>`
 - **Capture traces** in `raw/captures/` for full provenance of every wiki page
 
@@ -55,7 +55,7 @@ On first launch, Obsidian will download plugin code from its registry (only `dat
 │   ├── external/        ← Layer 2b: third-party sources (web clips, papers, lecture notes) — REQUIRED
 │   └── emails/          ← Layer 2c: email (inbound + outbound, including AI drafts) — OPT-IN
 └── wiki/                ← editable, source of work
-    ├── tasks/           ← task state machine (Method B: location = status)
+    ├── tasks/           ← task state machine (status: enum; folder mirrors status)
     │   ├── inbox/       ← untriaged captures from raw/captures/
     │   ├── next/        ← active tasks
     │   ├── waiting/     ← blocked-on tasks
@@ -73,16 +73,21 @@ On first launch, Obsidian will download plugin code from its registry (only `dat
         └── tasks/       ← old done tasks (moved out of done/)
 ```
 
-## Method B: location = status
+## Task status (enum)
 
-| Concept | Where it lives | "Done" means |
+Every task has a `status:` field (required). Folder mirrors status.
+
+| Status | Folder | Notes |
 |---|---|---|
-| Task (active) | `wiki/tasks/next/` | moved to `wiki/tasks/done/` with `completed:` date |
-| Task (blocked) | `wiki/tasks/waiting/` | moved to `wiki/tasks/done/` with `resolved:` date |
-| Capture (untriaged) | `raw/captures/YYYY-MM-DD-*.md` | triaged → moved to `wiki/tasks/inbox/` + adds `triaged:` + `triage_target:` |
-| Calendar event (one-time) | `wiki/calendar/synced/` | end date `===` passed |
-| Calendar event (recurring instance) | `wiki/calendar/daily/` | end date passed |
-| Daily note | `wiki/daily/YYYY-MM-DD.md` | today's file exists |
+| `inbox` | `wiki/tasks/inbox/` | Triaged, not yet scheduled |
+| `next` | `wiki/tasks/next/` | Active this week |
+| `waiting` | `wiki/tasks/waiting/` | Blocked on someone/something |
+| `someday` | `wiki/tasks/someday/` | Maybe later |
+| `done` | `wiki/tasks/done/YYYY-MM/` | Completed (set `completed:` date) |
+| `cancelled` | `archives/tasks/` | Will not do |
+
+Captures in `raw/captures/` are pre-task. Use `triaged:` + `triage_target:` for status tracking.
+
 
 ## Commit Convention
 
